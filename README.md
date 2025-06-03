@@ -41,8 +41,7 @@ file-processing-project/
 
 ## Setup Instructions
 
-### Step 1: Start LocalStack
-
+step 1: Start LocalStack
 Run the following command in your project root directory to start LocalStack services (S3, Lambda, DynamoDB):
 
 ```bash
