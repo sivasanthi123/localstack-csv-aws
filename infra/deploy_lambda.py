@@ -5,7 +5,7 @@ import time
 # AWS parameters - change these accordingly
 LAMBDA_FUNCTION_NAME = 'ProcessCSVFunction'
 LAMBDA_HANDLER = 'process_csv.lambda_handler'
-LAMBDA_ROLE_ARN = 'your_iam_role_arn'  # replace with your IAM role arn and when creating the IAM role Must have Lambda and S3 permissions
+LAMBDA_ROLE_ARN = 'arn:aws:iam::403992703775:role/lambda-execution-role'  # replace with your IAM role arn and when creating the IAM role Must have Lambda and S3 permissions
 ZIP_FILE = 'process_csv.zip'
 
 # Set your bucket and folder (prefix) here:
@@ -14,7 +14,7 @@ S3_PREFIX = ''                   # <-- replace or '' for root of bucket
 S3_EVENT = 's3:ObjectCreated:*'                  
 
 AWS_REGION = 'us-east-1'                         # <-- your AWS region here
-AWS_ACCOUNT_ID = 'your_account_id'                  # Your AWS Account ID
+AWS_ACCOUNT_ID = '403992703775'                  # Your AWS Account ID
 
 lambda_client = boto3.client('lambda', region_name=AWS_REGION)
 s3_client = boto3.client('s3', region_name=AWS_REGION)
